@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(255, 222, 172);
+    margin: 0;
+}
+
+/* TEXTE */
+h1{
+    user-select: none;
+    padding-top: 10% ;
+    color: rgb(55, 255, 65);
+    opacity: 0;
+    animation: apparition 7s forwards;
+    font-size: 3vw;
+}
+
+@keyframes apparition{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* COEUR */
+.a{
+    padding-top: 1%;
+    text-align: center;
+    background-color: rgb(255, 55, 115);
+    position: relative;
+
+    margin: auto;
+    margin-top: 10vh;
+
+    width: 75vw;
+    aspect-ratio: 1;
+
+    clip-path: 
+        shape(
+        from 50% 91%,
+        line to 90% 50%,
+        arc to 50% 9% of 1%,
+        arc to 10% 50% of 1%
+    );
+
+    transition: 2s;
+}
+
+.a:active{
+    transform: scale(1.2);
+    transition: 1ms;
+    background-color: pink ;
+
+
+
+}
+
+.a:active h1{
+    transition: 1ms;
+    color:  rgb(152, 255, 55);
+}
+
+/* VERSION TELEPHONE */
+@media (max-width: 600px){
+
+    h1{
+        font-size: 7vw;
+        margin-top: 30px;
+    }
+
+    .a{
+        width: 90vw;
+        margin-top: 20vh;
+    }
+
+}
